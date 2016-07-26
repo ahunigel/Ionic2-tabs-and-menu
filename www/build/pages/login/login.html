@@ -1,9 +1,11 @@
-<ion-navbar *navbar>
+<ion-header>
+<ion-navbar>
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title></ion-title>
 </ion-navbar>
+</ion-header>
 
 <ion-toolbar [attr.primary]="isAndroid ? '' : null" >
   <ion-segment [(ngModel)]="user" [attr.light]="isAndroid ? '' : null">

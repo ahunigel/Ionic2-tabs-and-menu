@@ -3,7 +3,7 @@ import {HelloIonicPage} from '../hello-ionic/hello-ionic';
 import {LoginPage} from '../login/login';
 import {ListPage} from '../list/list';
 
-import {Type} from 'angular2/core';
+import {Type} from '@angular/core';
 
 @Page({
   templateUrl: 'build/pages/tabs/tabs.html'
