@@ -15,25 +15,12 @@ class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = TabsPage;
-  pages: Array<{ title: string, component: any }>;
 
   constructor(
     private platform: Platform,
     private menu: MenuController
   ) {
     this.initializeApp();
-
-    // set our app's pages
-    this.pages = [
-      { title: 'Home', component: HelloIonicPage },
-      { title: 'List Example', component: ListPage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Tabs', component: TabsPage }
-    ];
-  }
-
-  doRefresh(refresher) {
-    console.log('do nothing for now')
   }
 
   initializeApp() {
@@ -44,14 +31,6 @@ class MyApp {
     });
   }
 
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    // this.menu.enable(false);
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    // let nav = this.app.getComponent('nav');
-    this.nav.setRoot(page.component);
-  }
 }
 
 
