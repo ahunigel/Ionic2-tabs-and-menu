@@ -1,5 +1,4 @@
-// import 'es6-shim';
-import {Component,ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Platform, MenuController, Nav, NavController, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
@@ -14,15 +13,13 @@ import {LoginPage} from './pages/login/login';
 })
 class MyApp {
   @ViewChild(Nav) nav: Nav;
-  // make HelloIonicPage the root (or first) page
+
   rootPage: any = TabsPage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(
-    // private app: IonicApp,
     private platform: Platform,
     private menu: MenuController
-    // private nav: NavController
   ) {
     this.initializeApp();
 
@@ -34,9 +31,11 @@ class MyApp {
       { title: 'Tabs', component: TabsPage }
     ];
   }
-doRefresh(dom) {
-  
-}
+
+  doRefresh(refresher) {
+    console.log('do nothing for now')
+  }
+
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

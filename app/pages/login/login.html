@@ -1,13 +1,13 @@
 <ion-header>
-<ion-navbar>
-  <button menuToggle>
+  <ion-navbar>
+    <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title></ion-title>
-</ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-toolbar [attr.primary]="isAndroid ? '' : null" >
+<ion-toolbar [attr.primary]="isAndroid ? '' : null">
   <ion-segment [(ngModel)]="user" [attr.light]="isAndroid ? '' : null">
     <ion-segment-button value="login">
       Login
@@ -20,11 +20,11 @@
 
 <ion-content>
 
-<!--   <div padding>
+  <!--   <div padding>
   </div>  -->
 
   <div [ngSwitch]="user">
-    <ion-list *ngSwitchWhen="'login'" inset>
+    <ion-list *ngSwitchCase="'login'" inset>
       <ion-item>
         <ion-label floating>Username</ion-label>
         <ion-input type="text"></ion-input>
@@ -35,13 +35,13 @@
         <ion-input type="password"></ion-input>
       </ion-item>
 
-    <div padding>
-      <button block>Login</button>
-    </div>
+      <div padding>
+        <button block>Login</button>
+      </div>
 
     </ion-list>
 
-    <ion-list *ngSwitchWhen="'register'" inset>
+    <ion-list *ngSwitchCase="'register'" inset>
       <ion-item>
         <ion-label floating>Username</ion-label>
         <ion-input type="text"></ion-input>
